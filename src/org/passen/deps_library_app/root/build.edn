@@ -1,0 +1,2 @@
+{:lib     {{name}}
+ :version "0.1.{{git/commit-count}}"}

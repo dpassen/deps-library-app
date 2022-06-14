@@ -1,0 +1,12 @@
+# -*- coding: utf-8 -*-
+* {{artifact/id}}
+
+{{description}}
+
+** Usage
+#+BEGIN_SRC clojure
+#+END_SRC
+** License
+Copyright © 2022 Derek Passen
+
+Released under an MIT license.
