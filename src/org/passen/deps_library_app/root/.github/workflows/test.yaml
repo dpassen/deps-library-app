@@ -1,11 +1,11 @@
-name: Check
+name: test
 on:
   push:
     branches: [main]
   pull_request:
     branches: [main]
 jobs:
-  check:
+  test:
     runs-on: ubuntu-latest
     steps:
       - name: Checkout
@@ -40,5 +40,5 @@ jobs:
       - name: Install just Task Runner
         uses: extractions/setup-just@v1
 
-      - name: Run Reflection Checker
-        run: just check
+      - name: Run Unit Tests
+        run: just test

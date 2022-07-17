@@ -1,11 +1,11 @@
-name: Lint
+name: check
 on:
   push:
     branches: [main]
   pull_request:
     branches: [main]
 jobs:
-  lint:
+  check:
     runs-on: ubuntu-latest
     steps:
       - name: Checkout
@@ -21,7 +21,6 @@ jobs:
         uses: DeLaGuardo/setup-clojure@8.0
         with:
           cli: latest
-          clj-kondo: latest
 
       - name: Cache dependencies
         uses: actions/cache@v3
@@ -38,11 +37,8 @@ jobs:
         if: steps.cache.outputs.cache-hit != 'true'
         run: clojure -P -X:check:test
 
-      - name: Install ripgrep
-        run: sudo apt-get install ripgrep
-
       - name: Install just Task Runner
         uses: extractions/setup-just@v1
 
-      - name: Run Linter
-        run: just lint
+      - name: Run Reflection Checker
+        run: just check
