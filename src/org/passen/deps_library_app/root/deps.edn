@@ -18,7 +18,7 @@
   :test
   {:extra-deps
    {lambdaisland/kaocha
-    {:mvn/version "1.69.1069"}
+    {:mvn/version "1.70.1086"}
     org.slf4j/slf4j-nop
     {:mvn/version "1.7.36"}}
    :extra-paths ["test"]
