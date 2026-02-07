@@ -1,2 +1,2 @@
-((clojure-ts-mode
+((clojure-mode
   (cider-clojure-cli-aliases . ":test")))
